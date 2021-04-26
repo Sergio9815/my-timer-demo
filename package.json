@@ -1,0 +1,13 @@
+{
+  "name": "my-timer-demo",
+  "version": "1.0.0",
+  "description": "Sitio web que hace uso de la librería myTimerJS para demostrar su utilidad.",
+  "main": "index.js",
+  "repository": "git@github.com:Sergio9815/my-timer-demo.git",
+  "author": "Sergio González",
+  "license": "MIT",
+  "dependencies": {
+    "@sagb_24/mytimerjs": "^1.4.1",
+    "granim": "^2.0.0"
+  }
+}
