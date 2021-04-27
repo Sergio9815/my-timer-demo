@@ -34,7 +34,7 @@ btn2.addEventListener('click',(e) => {
 
 btn3.addEventListener('click',(e) => {
   init.stop()
-  init.start()
+  iniciar()
 })
 
 btn4.addEventListener('click',(e) => {
