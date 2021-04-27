@@ -1,3 +1,9 @@
+const btn1 = document.getElementById('btn-1')
+const btn2 = document.getElementById('btn-2')
+const btn3 = document.getElementById('btn-3')
+const btn4 = document.getElementById('btn-4')
+
+
 var granimInstance = new Granim({
   element: '#canvas-interactive',
   name: 'interactive-gradient',
@@ -35,28 +41,22 @@ var granimInstance = new Granim({
   }
 });
 
-$('#btn-1').on('click', function (event) {
-  event.preventDefault();
+btn1.addEventListener('click', (e) => {
+  e.preventDefault();
   granimInstance.changeState('default-state');
-  setClass('#btn-1')
-});
-$('#btn-2').on('click', function (event) {
-  event.preventDefault();
-  granimInstance.changeState('violet-state');
-  setClass('#btn-2')
-});
-$('#btn-3').on('click', function (event) {
-  event.preventDefault();
-  granimInstance.changeState('orange-state');
-  setClass('#btn-3')
-});
-$('#btn-4').on('click', function (event) {
-  event.preventDefault();
-  granimInstance.changeState('final-state');
-  setClass('#btn-4')
-});
+})
 
-function setClass(element) {
-  $('.canvas-interactive-wrapper a').removeClass('active');
-  $(element).addClass('active');
-};
+btn2.addEventListener('click', (e) => {
+  e.preventDefault();
+  granimInstance.changeState('violet-state');
+})
+
+btn3.addEventListener('click', (e) => {
+  e.preventDefault();
+  granimInstance.changeState('orange-state');
+})
+
+btn4.addEventListener('click', (e) => {
+  e.preventDefault();
+  granimInstance.changeState('final-state');
+})
