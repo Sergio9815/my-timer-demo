@@ -3,6 +3,13 @@ h1 {
   font-size: 3rem;
 }
 
+html, body{
+  display: flex;
+  flex-direction: column;
+  height:100vh;
+  margin: 0;
+}
+
 #timerJS {
   width: 90%;
   display: flex;
