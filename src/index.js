@@ -14,13 +14,22 @@ const init = new Timer({
   timerFormat: '00:00:00' 
 });
 
-
-btn1.addEventListener('click',(e) => {
+const iniciar = () => {
   init.start()
-})
+  btn1.removeEventListener('click', iniciar, true)
+  btn1.classList.add('active')
+}
+
+const addListenerBtn = () => {
+  btn1.classList.remove('active')
+  btn1.addEventListener('click', iniciar, true)
+}
+
+btn1.addEventListener('click', iniciar, true)
 
 btn2.addEventListener('click',(e) => {
   init.pause()
+  addListenerBtn()
 })
 
 btn3.addEventListener('click',(e) => {
@@ -30,4 +39,5 @@ btn3.addEventListener('click',(e) => {
 
 btn4.addEventListener('click',(e) => {
   init.stop()
+  addListenerBtn()
 })
